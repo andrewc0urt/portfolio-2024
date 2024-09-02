@@ -1,0 +1,264 @@
+/* Control the spacing between all sections */
+#intro-section, #skills-section, #projects-section {
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+}
+
+#contact-section {
+  padding-bottom: 6rem;
+}
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+/* Styling for Navbar */
+.nav-item a {
+  font-size: 1.1em;
+}
+#portfolio-title {
+  font-size: 1.5em;
+}
+
+/* ABOUT ME (introduction) Section */
+#intro-section {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+
+
+#profile-pic {
+  width: 40%;
+}
+
+
+.intro-text-container h4 {
+  text-align: center;
+}
+
+.intro-text-container p {
+  text-align: justify;
+}
+
+/* Styles for the actual tab element */
+.tab-element-container {
+  padding-bottom: 1rem;
+}
+
+.nav {
+  --bs-nav-link-padding-y: 0; /* Removes the padding between the tab name and the underline */
+}
+
+.tab-pane {
+  padding-top: 0.5rem;
+}
+
+
+
+/* Styles for the information displayed for the Socials tab */
+.social-icon {
+  width: 1.3rem;
+  border-radius: 50%;
+}
+
+.socials-container{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Styles for the information displayed for the Education tab */
+.individual-education-container h5, .individual-education-container p {
+  text-align: center;
+}
+.university-name {
+  color: #008485;
+}
+
+.individual-education-container h5 {
+  font-size: 1.2em;
+}
+
+.individual-education-container p {
+  font-size: 1em;
+}
+#resume-download-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* SKILLS & FRAMEWORKS SECTION */
+#skills-frameworks-container {
+  width: 85%;
+}
+.skill-span {
+  text-decoration: underline;
+}
+.skills-icon-group {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+/* Change background color of MongoDB Icon */
+#mongodb-icon {
+  background-color: #fefee3;
+}
+/* Image Changing for JavaScript & Frameworks Section */
+.images-js-frameworks-container {
+  position: relative;
+  width: 5rem; /* Adjust to your desired size */
+  height: 5rem; /* Adjust to your desired size */
+  margin: 0 auto;
+}
+
+.images-js-frameworks-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: flip-js-and-frameworks 9s infinite;
+}
+
+/* Animation Delays for Each Image */
+.images-js-frameworks-containerimg:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.images-js-frameworks-container img:nth-child(2) {
+  animation-delay: 3s; /* Delay for the second image */
+}
+
+.images-js-frameworks-container img:nth-child(3) {
+  animation-delay: 6s; /* Delay for the third image */
+}
+
+/* Keyframes for Programming Languages Animation */
+@keyframes flip-js-and-frameworks {
+  0%,
+  33.33% {
+    opacity: 1;
+  }
+  33.34%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Image Changing for the Programming Languages Skill */
+.images-programming-languages-container {
+  position: relative;
+  width: 5rem; /* Adjust to your desired size */
+  height: 5rem; /* Adjust to your desired size */
+  margin: 0 auto; /* Center the container */
+}
+
+.images-programming-languages-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: flip-programming-languages 6s infinite;
+}
+
+.images-programming-languages-container img:first-child {
+  animation-delay: 0s;
+}
+
+.images-programming-languages-container img:last-child {
+  animation-delay: 3s; /* Half of the total animation time */
+}
+
+@keyframes flip-programming-languages {
+  0%,
+  49.99% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Image Changing for the VERSION CONTROL Skill */
+.images-vc-container {
+  position: relative;
+  width: 5rem; /* Adjust to your desired size */
+  height: 5rem; /* Adjust to your desired size */
+  margin: 0 auto; /* Center the container */
+}
+
+.images-vc-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: flip-version-control 6s infinite;
+}
+
+.images-vc-container img:first-child {
+  animation-delay: 0s;
+}
+
+.images-vc-container img:last-child {
+  animation-delay: 3s; /* Half of the total animation time */
+}
+
+@keyframes flip-version-control {
+  0%,
+  49.99% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* PROJECTS Section */
+.section-container {
+  width: 50%;
+}
+
+.individual-view-project-btns a{
+  width: 138.43px;
+}
+
+#live-demo-link {
+  margin-right: 1rem;
+}
+
+
+/* CONTACT ME Section */
+#email-link {
+  text-decoration: none;
+}
+
+/* Section with SECOND Set of NAV LINKS */
+.horizontal-line, .nav-links-2 {
+  width: 80%;
+  margin: 0 auto;
+}
+.nav-links-2 a {
+  text-decoration: none;
+}
+
+/* FOOTER Section */
+
+
+footer {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 2rem;
+}
