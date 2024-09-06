@@ -289,7 +289,7 @@
                   </p>
                   <div class="individual-view-project-btns">
                     <!-- <div class="d-flex justify-content-center individual-view-project-btns"> -->
-                    <a href="#" target="_blank" class="btn btn-success" id="live-demo-link">Live Demo</a>
+                    <a data-bs-toggle="modal" data-bs-target="#project-modal" class="btn btn-success" id="live-demo-link">Live Demo</a>
                     <a href="https://github.com/andrewc0urt/yelp-camp-app" id="view-github-link" target="_blank" class="btn btn-warning">View on GitHub</a>
                   </div>
                 </div>
@@ -333,8 +333,38 @@
         <p class="">Copyright © 2024 Andrew Court. All Rights Reserved.</p>
       </footer>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="project-modal" tabindex="-1" aria-labelledby="projectModallLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="projectModelLabel"><i class="bi bi-info-circle-fill"></i> Important Notice</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Go Back"></button>
+          </div>
+          <div class="modal-body">
+            <p>Hi there! Just a heads-up: This site is hosted on Fly.io's free tier, so it might take up to 30 seconds to load if it hasn't been visited recently. After that, it'll run smoothly. Thanks for your patience!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go Back</button>
+            <a href="https://yelp-camp-app.fly.dev" class="btn btn-primary" id="continue-btn" target="_blank">Continue to YelpCamp</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Bootstrap JS Bundle CDN -->
     <!-- This script imports the Bootstrap JavaScript library, including Popper.js. -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- JavaScript to manually close the modal when the user clicks to continue to the project's live site -->
+    <!-- Necessary to open the website link on a new page, but also ensure the modal dismisses on the portfolio page -->
+
+    <script>
+      document.getElementById("continue-btn").addEventListener("click", function () {
+        // Get the modal instance and hide it manually
+        const liveDemoModal = bootstrap.Modal.getInstance(document.getElementById("project-modal"));
+        liveDemoModal.hide();
+      });
+    </script>
   </body>
 </html>
